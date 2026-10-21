@@ -143,6 +143,7 @@ const controlDevice = async (req, res) => {
 const createDevice = async (req, res) => {
   const gardenID = req.body.gardenID;
   const data = req.body.data;
+  if (typeof data !== 'string') return res.status(400).json({ "data": "error" });
   const splitData = data.split(':');
   if (splitData.length != 3) return res.status(400).json({ "data": "error" });
   const header = splitData[0];
