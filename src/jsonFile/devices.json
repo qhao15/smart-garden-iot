@@ -1,0 +1,45 @@
+{
+  "devices": [
+    {
+      "name": "Nhiệt độ và độ ẩm không khí",
+      "pin": "P19",
+      "typeDevice": 2,
+      "value": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "Độ ẩm đất",
+      "pin": "P1",
+      "typeDevice": 1,
+      "value": [
+        "0"
+      ]
+    },
+    {
+      "name": "Cường độ ánh sáng",
+      "pin": "P0",
+      "typeDevice": 0,
+      "value": [
+        "0"
+      ]
+    },
+    {
+      "name": "Máy bơm",
+      "pin": "P3",
+      "typeDevice": 3,
+      "value": [
+        "0"
+      ]
+    },
+    {
+      "name": "Đèn",
+      "pin": "P2",
+      "typeDevice": 3,
+      "value": [
+        "0"
+      ]
+    }
+  ]
+}

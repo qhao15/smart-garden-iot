@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Date-Time Picker</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"
+        ></script>
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.css"
+            integrity="sha512-BB0bszal4NXOgRP9MYCyVA0NNK2k1Rhr+8klY17rj4OhwTmqdPUQibKUDeHesYtXl7Ma2+tqC6c7FzYuHhw94g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.css"
+            integrity="sha512-MT4B7BDQpIoW1D7HNPZNMhCD2G6CDXia4tjCdgqQLyq2a9uQnLPLgMNbdPY7g6di3hHjAI8NGVqhstenYrzY1Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+        />
+        <!----===== Boxicons CSS ===== -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <!-- gg icon -->
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link href="/css/time.css" rel="stylesheet" type="text/css">
+        <link href="/css/settime.css" rel="stylesheet" type="text/css">
+        <title>IOT FARM</title>
+    </head>
+    <body>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="/img/01_logobachkhoasang 1.svg" alt="" />
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">Hệ thống</span>
+                        <span class="profession">Vườn thông minh</span>
+                    </div>
+                </div>
+
+                <i class="bx bx-chevron-right toggle"></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class="bx bx-search icon"></i>
+                        <input type="text" placeholder="Search..." />
+                    </li>
+
+                    <ul class="menu-link">
+                        <li class="nav-link">
+                            <a href="/dashBoard">
+                                <i class="bx bx-home-alt icon"></i>
+                                <span class="text nav-text"
+                                    >Điều khiển động cơ</span
+                                >
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="/nhietDo">
+                                <!-- <i class="bx bx-bar-chart-alt-2 icon"></i> -->
+                                <span class="material-symbols-outlined icon">
+                                    device_thermostat
+                                </span>
+                                <span class="text nav-text">Nhiệt độ</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="/doAmDat">
+                                <!-- <i class="bx bx-bell icon"></i> -->
+                                <span class="material-symbols-outlined icon">
+                                    humidity_mid
+                                </span>
+                                <span class="text nav-text">Độ ẩm đất</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="/doAmKhongKhi">
+                                <!-- <i class="bx bx-pie-chart-alt icon"></i> -->
+                                <span class="material-symbols-outlined icon">
+                                    humidity_percentage
+                                </span>
+                                <span class="text nav-text"
+                                    >Độ ẩm không khí</span
+                                >
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="/anhSang">
+                                <span class="material-symbols-outlined icon">
+                                    wb_sunny
+                                </span>
+                                <span class="text nav-text">Ánh sáng</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="/lapLich">
+                                <i class="bx bx-wallet icon"></i>
+                                <span class="text nav-text"
+                                    >Cài đặt thời gian</span
+                                >
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="#">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class="bx bx-moon icon moon"></i>
+                            <i class="bx bx-sun icon sun"></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+        <!-- SECTION -->
+        <section class="home">
+            <div class="top">
+                <div></div>
+                <div class="d-flex align-items-center">
+                    <span>Vườn 1</span>
+                    <span class="material-symbols-outlined"> enable </span>
+                </div>
+                <div class="dropdown">
+                    <button
+                        class="btn btn-secondary btn-sm dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <img src="/img/people.jpg" alt="" /> admin
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li>
+                            <a class="dropdown-item active" href="#"
+                                >Thông tin cá nhân</a
+                            >
+                        </li>
+                        <li><a class="dropdown-item" href="#">Thông báo</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Trạng thái</a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Cài đặt thời gian -->
+            <div class="p-4">
+                <div class="text">Thiết lập thời gian</div>
+                <div class="home-content">
+                    <div class="overview d-flex justify-content-end p-3 gap-5">
+                        <div
+                            class="title d-flex align-items-center justify-content-center"
+                        >
+                            <span class="material-symbols-outlined">
+                                event
+                            </span>
+                            <a href="/lapLich"
+                                ><span class="sub-text icon"
+                                    >Đã đặt lịch</span
+                                ></a
+                            >
+                        </div>
+                        <div
+                            class="title d-flex align-items-center justify-content-center"
+                        >
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                            <a href="/caiDatThoiGian"
+                                ><span class="sub-text icon"
+                                    >Chọn thời gian</span
+                                ></a
+                            >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table class="table text-center">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th scope="col">Số thứ tự</th>
+                                    <th scope="col">Tên động cơ</th>
+                                    <th scope="col">Thời gian bắt đầu</th>
+                                    <th scope="col">Thời gian kết thúc</th>
+                                    <th scope="col">Đặt thiết lập</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <!-- select dong co -->
+                                    <td>
+                                        <select
+                                            class="form-select"
+                                            aria-label=".form-select-lg example"
+                                        >
+                                            <option selected value="">
+                                                Chọn Tên động cơ
+                                            </option>
+                                            <!-- JS -->
+                                        </select>
+                                    </td>
+                                    <!-- clock -->
+                                    <td>
+                                        <div class="col">
+                                            <div
+                                                class="input-group clockpicker"
+                                                data-placement="bottom"
+                                                data-align="bottom"
+                                                data-autoclose="true"
+                                            >
+                                                <input
+                                                    type="text"
+                                                    class="form-control startTime"
+                                                    placeholder="Thời gian bắt đầu"
+                                                />
+                                                <span class="input-group-addon">
+                                                    <i class="bi bi-clock"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col">
+                                            <div
+                                                class="input-group clockpicker"
+                                                data-placement="bottom"
+                                                data-align="bottom"
+                                                data-autoclose="true"
+                                            >
+                                                <input
+                                                    type="text"
+                                                    class="form-control stopTime"
+                                                    placeholder="Thời gian kết thúc"
+                                                />
+                                                <span class="input-group-addon">
+                                                    <i class="bi bi-clock"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btnSubmit"
+                                        >
+                                            Đặt
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- script clock-picker -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/jquery-clockpicker.min.js"
+            integrity="sha512-x0qixPCOQbS3xAQw8BL9qjhAh185N7JSw39hzE/ff71BXg7P1fkynTqcLYMlNmwRDtgdoYgURIvos+NJ6g0rNg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.js"
+            integrity="sha512-1QoWYDbO//G0JPa2VnQ3WrXtcgOGGCtdpt5y9riMW4NCCRBKQ4bs/XSKJAUSLIIcHmvUdKCXmQGxh37CQ8rtZQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script >
+            $(function () {
+                $("#datepicker").datepicker();
+            });
+
+            $(".clockpicker").clockpicker();
+
+        </script>
+        <script>
+            
+            const body = document.querySelector("body"),
+                sidebar = body.querySelector("nav"),
+                toggle = body.querySelector(".toggle"),
+                searchBtn = body.querySelector(".search-box"),
+                modeSwitch = body.querySelector(".toggle-switch"),
+                modeText = body.querySelector(".mode-text");
+
+            toggle.addEventListener("click", () => {
+                sidebar.classList.toggle("close");
+            });
+
+            searchBtn.addEventListener("click", () => {
+                sidebar.classList.remove("close");
+            });
+
+            modeSwitch.addEventListener("click", () => {
+                body.classList.toggle("dark");
+
+                if (body.classList.contains("dark")) {
+                    modeText.innerText = "Light mode";
+                } else {
+                    modeText.innerText = "Dark mode";
+                }
+            });
+        </script>
+        <script>//create options for select output device
+            const devices = JSON.parse('<%- JSON.stringify(data) %>');
+            const selectDeviceElement = document.querySelector('.form-select');
+            devices.forEach((device) => {
+                if(device.type === '4'){
+                    selectDeviceElement.innerHTML += `<option value="${device._id}">${device.deviceName}</option>`;
+                }
+            })
+        </script>
+        <script>//handle submit scheduler time
+            const btnSubmit = document.querySelector('.btnSubmit');
+            btnSubmit.addEventListener('click', async (e) => {
+                e.preventDefault();
+                const deviceID = document.querySelector('.form-select').value;
+                const startTime = document.querySelector('.startTime').value;
+                const stopTime = document.querySelector('.stopTime').value;
+                //check empty
+                if(!deviceID || !startTime || !stopTime){
+                    alert('Vui lòng chọn đầy đủ thông tin');
+                    return;
+                }
+                
+                //check time
+                const startMinute = parseInt(startTime.split(':')[0])*60 + parseInt(startTime.split(':')[1]);
+                const stopMinute = parseInt(stopTime.split(':')[0])*60 + parseInt(stopTime.split(':')[1]);
+                if(stopMinute < startMinute){
+                    alert('Thời gian kết thúc phải lớn hơn thời gian bắt đầu');
+                    return;
+                }
+                //call api to create scheduler
+                const res = await fetch('/api/scheduler', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        'outputID': deviceID,
+                        'start_time': startMinute,
+                        'stop_time': stopMinute,
+                        'action': '1'
+                    })
+                })
+                
+                if(res.ok){
+                    const responseData = await res.json();
+                    console.log(responseData.scheduler);
+                    if(window.confirm('Đặt lịch thành công.\n Nhấn đồng ý để tải lại trang')){
+                        window.location.reload();
+                    }
+                }else {
+                    if(alert('Đặt lịch thất bại. Vui lòng thử lại'));
+                }
+            })
+        </script>
+    </body>
+</html>

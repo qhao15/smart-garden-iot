@@ -1,0 +1,535 @@
+/* Google Font Import - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color: #695cfe;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+    --icon-color: #5bbcff;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+.sidebar.close {
+    width: 88px;
+}
+
+/* ===== Reusable code - Here ===== */
+.sidebar li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+.sidebar.close .text {
+    opacity: 0;
+}
+/* =========================== */
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+.sidebar header .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .image-text .profession {
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+/* reset bootrap */
+.sidebar .menu-link {
+    padding: 0;
+}
+.sidebar .menu-link .nav-link {
+    padding: 0;
+}
+/* ===================== */
+.sidebar header .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle {
+    color: var(--text-color);
+}
+
+.sidebar.close .toggle {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu {
+    margin-top: 40px;
+}
+
+.sidebar li.search-box {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.sidebar li.search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: var(--tran-05);
+}
+.sidebar li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+
+.sidebar li a:hover {
+    background-color: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+    color: var(--text-color);
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+.sidebar .menu-bar .mode {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    position: relative;
+    transition: var(--tran-05);
+}
+
+.menu-bar .mode .sun-moon {
+    height: 50px;
+    width: 60px;
+}
+
+.mode .sun-moon i {
+    position: absolute;
+}
+.mode .sun-moon i.sun {
+    opacity: 0;
+}
+body.dark .mode .sun-moon i.sun {
+    opacity: 1;
+}
+body.dark .mode .sun-moon i.moon {
+    opacity: 0;
+}
+
+.menu-bar .bottom-content .toggle-switch {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+
+body.dark .switch::before {
+    left: 20px;
+}
+/* =================SECTION================= */
+.home {
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+.home > .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 12px 60px;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.p-5 .text{
+    font-size: 30px;
+    font-weight: 500;
+}
+.container{
+    display: flex;
+    
+}
+.temp{
+    --primary: rgb(114, 231, 90);
+    --secondary: rgb(218, 218, 218);
+    --value: 39;
+    width: 450px;
+    height: 250px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-210%, 40%);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding: 40px 0;    
+}
+
+.temp .infor1 {
+    position: relative;
+    font-size: 80%;
+    color:var(--text-color);
+    display: flex;
+    justify-content: center;
+}
+
+.temp .chart{
+    width: 250px;
+    aspect-ratio: 2/1;
+    border-radius: 50% / 100% 100% 0% 0%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end ;
+    justify-content: center;
+    font-size: 60%;
+    
+}
+.temp .chart::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from 0.75turn at 50% 100%, var(--primary) calc((var(--value) ) * 1%), var(--secondary)0);
+    mask: radial-gradient(at 50% 100%, white 55%, transparent 0);;
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(at 50% 100%, #0000 55%,#000 0);
+    -webkit-mask-mode: alpha;   
+    
+    
+}
+.temp .chart::after{
+    counter-reset: percentage var(--value);
+    content: counter(percentage)  " °C";
+    font-weight: 700;
+    font-size: 120%;
+    
+}
+
+ .temp .infor2 span{
+    font-size: 80%;
+    color: var(--text-color);
+}
+ .temp .infor2 span:first-child {
+    position: absolute;
+    transform: translate(-790%,0%);
+}
+ .temp .infor2 span:last-child {
+    position: absolute;
+    transform: translate(300%,0%);
+}
+
+.temp2{
+    width: 1400px;
+    height: 500px;
+    position: relative;
+    transform: translate(12%, 20%);
+    margin: 0 ;
+    padding: 0;
+
+}
+
+.nums{
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100%;
+    float: left;
+    
+}
+
+.nums li{
+    list-style: none;
+    height: 58px;
+    position: relative;
+    font-size: 60%;
+    margin-top: 8px;
+}
+.nums span{
+    position: absolute;
+    right: 67px;
+    bottom: 40px;
+}
+
+.bars{
+    width: 90%;
+    height: 350px;
+    background: var(--body-color);
+    margin:0 ;
+    padding: 0;
+    display: inline-block;
+    box-shadow: 0 0 20px 0 #555;
+    border-radius: 5px;
+    margin-left: -60px;
+}
+
+.bars li{
+    display: table-cell;
+    width: 400px;
+    font-size: 60%;
+    position: relative;
+}
+.bars span{
+    width: 100%;
+    position: absolute;
+    bottom: -380px;
+    left: 20px;
+}
+.bars .bar{
+    display: block;
+    background: rgb(114, 231, 90);
+    width: 50%;
+    position: absolute;
+    bottom: -350px;
+    left: 30px;
+    text-align: center;
+}
+.bars .bar::before{
+    content: attr(data-percentage)'°C';
+    font-size: 80%;
+    position: relative;
+    top: -25px;
+}
+
+.bars .bar:hover
+{
+    background: rgb(70, 142, 56);
+}
+
+
+
+
+
+
+
+
+.sidebar.close ~ .home {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+body.dark .home .text {
+    color: var(--text-color);
+}
+
+/* topp */
+.home .top {
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    background-color: var(--sidebar-color);
+    justify-content: space-between;
+    align-items: center;
+}
+.home .top i{
+
+}
+.home .top img{
+    /* margin-left: px; */
+}
+.home .top img {
+    width: 30px;
+    border-radius: 999px;
+}
+
+.home-content {
+    padding: 10px;
+}
+
+.home-content .overview .title {
+    display: flex;
+    align-items: center;
+    margin: 25px 50px;
+    gap: 10px;
+}
+
+.home-content .overview .title .icon {
+    position: relative;
+    height: 50px;
+    width: 5px;
+    background-color: var(--icon-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.home-content .overview .title .text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.home .mode .button {
+    gap: 30px;
+}
